@@ -1,0 +1,239 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("assets/Background-Home.jpg");
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+html {
+    font-size: 60%; 
+    overflow-x: hidden;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.619) ;
+    padding: 40px 60px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: black;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    height: 50px;
+    width:200px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-link i {
+    margin-left: 15px;
+    margin-right: 5px;
+}
+
+.contact-link.instagram {
+    
+    font-size: 20px;
+    background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    color:white;
+}
+
+.contact-link.instagram:hover {
+    transform: scale(1.1);
+    transition: 0.2s ease-in-out;
+    background-color: #BC2A8D;
+}
+
+.contact-link.linkedin {
+    background-color: #0077B5;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.contact-link.linkedin:hover {
+    transform: scale(1.1);
+    transition: 0.2s ease-in-out;
+    background-color: #005582;
+}
+
+.contact-link.X {
+    background-color: #000000;
+    color: #fff;
+    font-size: 20px;
+}
+
+.contact-link.X:hover {
+    transform: scale(1.1);
+    transition: 0.2s ease-in-out;
+    background-color: #000000;
+}
+
+.contact-link.facebook {
+    
+    background-color: #1877F2;
+    color: #fff;
+    font-size: 20px;    
+}
+
+.contact-link.facebook:hover {
+    transform: scale(1.1);
+    transition: 0.2s ease-in-out;
+    background-color: #1558B2;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --bg-color: #080808;
+    --second-bg-color: #131313;
+    --text-color: white;
+    --main-color: #F8CF40;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; /* Make sure header spans full width */
+    padding: 4rem 12% 4rem;
+    
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+    position: absolute;
+    margin-top: 5px; /* Adjust this value to position your logo */
+    left: 1rem; /* Adjust this value to position your logo */
+}
+.logo img {
+    height: 300px; /* Adjust the height of your logo */
+    width: 300px; /* Maintain aspect ratio */
+    display: block; /* Remove any extra spacing */
+}
+.logo:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+#Twitter{
+    height: 25px;
+    width: 14px;
+    margin-right:10px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 3rem; 
+    /* Adjust this value to position the navbar */
+    right: 10rem; /* Adjust this value to position the navbar */
+}
+
+.navbar a {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-left: 2rem; /* Adjust the spacing between links */
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover, .navbar a.active {
+    color: #F8CF40;
+    border-bottom: 3px solid #F8CF40;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 12% 10rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        top: 8rem;
+        right: 2rem;
+    }
+
+    .navbar a {
+        margin: 5px 0;
+        font-size: 1.5rem;
+    }
+
+    .home-content {
+        text-align: center;
+        align-items: center;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    button {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        top: 9rem;
+        right: 1rem;
+    }
+
+    .navbar a {
+        font-size: 1.2rem;
+    }
+
+    .home-content h1 {
+        font-size: 3.5rem;
+    }
+
+    button {
+        width: 70%;
+        font-size: 1.2rem;
+    }
+
+    .logo img {
+        height: 200px;
+        width: 200px;
+    }
+}
