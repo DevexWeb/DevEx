@@ -5,7 +5,230 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    background-image: url('assets/Background-Home.jpg'); /* Replace with you/* Services.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
     background-image: url('assets/Background-Home.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    color: var(--text-color);
+}
+
+:root {
+    --bg-color: #080808;
+    --second-bg-color: #131313;
+    --text-color: white;
+    --main-color: #F8CF40;
+}
+
+html {
+    font-size: 60%;
+    overflow-x: hidden;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 4rem 12%;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+
+.logo {
+    font-size: 3rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+    position: absolute;
+    margin-top: 5px;
+    left: 1rem;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+.logo img {
+    height: 300px;
+    width: 300px;
+    display: block;
+}
+
+.logo span {
+    text-shadow: 0 0 25px var(--main-color);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 3rem;
+    right: 10rem;
+}
+
+.navbar a {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-left: 2rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover, .navbar a.active {
+    color: #F8CF40;
+    border-bottom: 3px solid #F8CF40;
+}
+
+.services {
+    color: var(--text-color);
+    padding: 8rem 12%;
+    text-align: center;
+}
+
+.services h2 {
+    margin-bottom: 5rem;
+    color: white;
+}
+
+/* Center the services cards vertically and horizontally */
+.services-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.services-box {
+    background-color: var(--main-color);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    color: #000;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.services-box h4 {
+    font-size: 20px;
+    margin-top: 0;
+    transition: transform 1s ease, top 1s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.services-box p {
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+   
+ 
+}
+
+.services-box:hover {
+    transform: scale(1.05);
+    
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.services-box:hover h4 {
+    transition: 0.5s;
+    font-size: large;
+    top:80%;
+    
+   
+}
+
+.services-box :hover p {
+    transition: 2s;
+    opacity: 1;
+    
+}
+.services-info#Font:hover h4 {
+    font-size: 20px; /* Adjust the font size */
+    top: 80%; /* Adjust the top position */
+}
+
+.services-info#Font:hover p {
+    
+    opacity: 1;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        top: 8rem;
+        right: 2rem;
+    }
+
+    .navbar a {
+        margin: 5px 0;
+        font-size: 1.5rem;
+    }
+
+    .home-content {
+        text-align: center;
+        align-items: center;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    button {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        top: 9rem;
+        right: 1rem;
+    }
+
+    .navbar a {
+        font-size: 1.2rem;
+    }
+
+    .home-content h1 {
+        font-size: 3.5rem;
+    }
+
+    button {
+        width: 70%;
+        font-size: 1.2rem;
+    }
+
+    .logo img {
+        height: 200px;
+        width: 200px;
+    }
+}
+r image path */
     background-size: cover;
     background-position: center;
     color: var(--text-color);
