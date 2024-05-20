@@ -1,3 +1,5 @@
+/* Services.css */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -112,28 +114,51 @@ html {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     width: 100%;
-    max-width: 500px;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+   
 }
 
 .services-box h4 {
+    font-size: 20px;
     margin-top: 0;
-    transition: transform 0.3s ease, top 0.3s ease;
-    position: relative;
+    transition: transform 1s ease, top 1s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .services-box p {
-    margin: 1rem 0 0;
+    font-size: 25px;
+    
     opacity: 0;
     transition: opacity 0.3s ease;
+   
+ 
 }
 
 .services-box:hover {
     transform: scale(1.05);
+    
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
+.services-box:hover h4 {
+    transition: 0.5s;
+    font-size: large;
+    top:80%;
+    
+   
+}
+
 .services-box:hover p {
+    transition: 2s;
     opacity: 1;
+    
 }
 
 /* Responsive Styles */
@@ -188,5 +213,3 @@ html {
         width: 200px;
     }
 }
-
-    
